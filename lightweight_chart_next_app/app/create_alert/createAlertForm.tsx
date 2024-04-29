@@ -13,6 +13,7 @@ interface CreateAlertFormProps {
 }
 
 export default function CreateAlertForm({ onClose }: CreateAlertFormProps) { 
+    const session = useSession();
     const [symbol, setSymbol] = useState<string | null>(null);
     const [price, setPrice] = useState<number | null>(null);
     const [successSnackbarOpen, setSuccessSnackbarOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function CreateAlertForm({ onClose }: CreateAlertFormProps) {
 
     const addAlert = async () => {
         try {
-            const session = await getServerSession(asgardeoProviderOptions);
+            //const session = await getServerSession(asgardeoProviderOptions);
             const response = await fetch(`${FeatureConfig.getBackendUrl()}/alerts`, {
                 method: 'POST',
                 body: JSON.stringify({
@@ -28,7 +29,7 @@ export default function CreateAlertForm({ onClose }: CreateAlertFormProps) {
                     price: price,
                 }),
                 headers: {
-                    Authorization: `Bearer ${session?.accessToken}`,
+                    Authorization: `Bearer ${session?.data?.accessToken}`,
                     'Content-Type': 'application/json',
                 },
             });

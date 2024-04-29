@@ -1,0 +1,77 @@
+openapi: 3.0.0
+info:
+  title: Trade Helper API
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:{port}'
+    variables:
+      port:
+        default: '3001'
+paths:
+  /getIntradayStockPrice:
+    get:
+      summary: Get intraday stock price
+      parameters:
+        - name: symbol
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: interval
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+  /alerts:
+    post:
+      summary: Create a new alert
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Alert'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alert'
+    get:
+      summary: Get all alerts
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Alert'
+    delete:
+      summary: Delete an alert
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+components:
+  schemas:
+    Alert:
+      type: object
+      properties:
+        id:
+          type: string
+        symbol:
+          type: string
+        price:
+          type: number
+          format: float

@@ -3,8 +3,9 @@ version: 0.1
 
 # +required List of endpoints to create
 endpoints:
-- name: Alert and Chart
+- name: Trade Helper Service
   port: 3001
-  type: Alert
-  visibility: Public
+  type: REST
+  networkVisibility: Public
   context: /
+  schemaFilePath: openapi.yaml

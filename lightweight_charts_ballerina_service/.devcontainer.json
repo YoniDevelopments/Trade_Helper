@@ -1,16 +1,4 @@
 {
-    "name": "Ballerina Reading List",
-    "image": "ballerina/ballerina-devcontainer:2201.6.0",
-  
-    "customizations": {
-      "vscode": {
-        "extensions": ["WSO2.ballerina", "eamodio.gitlens"],
-        "settings": {
-          "files.insertFinalNewline": true,
-          "files.autoSave": "afterDelay",
-          "files.trimFinalNewlines": true,
-          "files.trimTrailingWhitespace": true
-        }
-      }
-    }
-  }
+    "image": "ballerina/ballerina-devcontainer:2201.8.6",
+    "extensions": ["WSO2.ballerina"],
+}

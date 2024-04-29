@@ -1,0 +1,10 @@
+# +required Version of the endpoint configuration YAML
+version: 0.1
+
+# +required List of endpoints to create
+endpoints:
+- name: Alert and Chart
+  port: 3001
+  type: Alert
+  visibility: Public
+  context: /

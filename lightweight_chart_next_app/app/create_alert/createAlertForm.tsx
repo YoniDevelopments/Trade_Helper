@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react';
 import { useState } from 'react';
 import SessionCheckComponent from '@/utils/common/components/sessionCheckComponent';
 import { getServerSession } from 'next-auth/next';
-import { asgardeoProviderOptions } from '@/utils/auth/authOptions'; // Make sure this path is correct
+
 
 interface CreateAlertFormProps {
     onClose: () => void; 

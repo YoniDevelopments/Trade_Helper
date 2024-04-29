@@ -5,7 +5,7 @@ import SessionCheckComponent from '@/utils/common/components/sessionCheckCompone
 import { FeatureConfig } from '@/feature_config/featureConfig';
 import { useState, useEffect, useCallback } from 'react'; 
 import { getServerSession } from 'next-auth/next';
-import { asgardeoProviderOptions } from '@/utils/auth/authOptions'; // Make sure this path is correct
+
 import { useSession } from 'next-auth/react';
 
 interface AlertEntry { 

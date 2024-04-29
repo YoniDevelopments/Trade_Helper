@@ -1,0 +1,27 @@
+{
+    "AuthorizationConfig": {
+        "BaseOrganizationUrl": "https://api.asgardeo.io/t/tradingwithyoni"
+    },
+    "ApplicationConfig": {
+        "HostedUrl": "http://localhost:3000",
+        "BackendUrl": "http://localhost:3001",
+        "ClientId": "W1UqG03uWY39eND_gOb4UqJko1oa",
+        "ClientSecret": "Ujf1UgCkCh4iAdkNpSnofPY32ykRrb904mGCEOqRGAMa",
+        "APIScopes": [
+            "openid",
+            "email",
+            "profile",
+            "internal_login"
+        ]
+    },
+    "Features": {
+        "Alert": {
+            "scopes": {
+                "create": ["alert:create"],
+                "view": ["alert:view"],
+                "delete": ["alert:delete"],
+                "view_chart": ["alert:view_chart"]
+            }
+        }
+    }
+}

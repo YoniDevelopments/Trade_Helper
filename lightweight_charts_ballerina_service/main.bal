@@ -4,7 +4,7 @@ import lightweight_charts_ballerina_service.util;
 import ballerina/http;
 import ballerina/uuid;
 
-
+//const string apiKey = "S681AOGA4TZTUJ1U";
 const string apiKey = "demo";
 const string symbol = "IBM";
 const string interval = "60min";
